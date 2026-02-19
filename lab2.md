@@ -18,8 +18,7 @@ A use case is a detailed description of how a user interacts with the system, in
 In summary: User stories are brief and value-focused, while use cases are structured and interaction-focused.
 
 Task-2
-## Class Diagram
-![Class Diagram](Blank diagram.png)
+Blank diagram.png
 
 What is a Package Diagram?
 A package diagram shows how classes or components are grouped into packages and how those packages depend on each other. It provides a high-level architectural view of system structure and module dependencies.

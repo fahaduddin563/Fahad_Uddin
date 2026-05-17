@@ -1,0 +1,32 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - lab6
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Compile Java File
+        run: javac HelloComp550.java
+
+      - name: Run Java Program
+        run: java HelloComp550 > output.txt
+
+      - name: Verify Output
+        run: grep "Hello Comp550" output.txt
